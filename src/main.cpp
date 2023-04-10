@@ -2,6 +2,7 @@
 
 using namespace lazy;
 
+/// implementation of a simple parser
 int main()
 {
     var entrada = R"(
