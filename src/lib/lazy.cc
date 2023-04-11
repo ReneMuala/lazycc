@@ -42,6 +42,16 @@ namespace lazy
             return result;
         }
 
+        string to_string(list<string> src)
+        {
+            string result;
+            for (final str : src)
+            {
+                result += "'" + str + "' ";
+            }
+            return result;
+        }
+
         string to_string(list<pair<string, string>> src)
         {
             string result;
@@ -52,7 +62,7 @@ namespace lazy
             return result;
         }
 
-        list<pair<string, string>> tokenize(unordered_map<string, regex> dict, string error_type_name, list<string> pre_tokens)
+        list<pair<string, string>> tokenize(list<pair<string, regex>> dict, string error_type_name, list<string> pre_tokens)
         {
             list<pair<string, string>> tokens;
             var is_type_resolved = bool();
