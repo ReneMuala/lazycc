@@ -6,12 +6,12 @@ using namespace lazy;
 int main()
 {
     var entrada = R"(
-        int x = 2;
+        int x =  1 + 2 * 2 \;
     )";
 
     final dicionario = unordered_map<string, regex>({
         {"numero", regex(R"(\d)")},
-        {"operador", regex(R"([=\+-\*/])")},
+        {"operador", regex(R"([=\\+-\\*/])")},
         {"palavra reservada", regex(R"(void|int)")},
         {"delimitador", regex(R"([\(\)\[\];\{\}])")},
         {"identificador", regex(R"(\w+)")},
